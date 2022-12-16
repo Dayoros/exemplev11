@@ -8,17 +8,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('exemplev11') {
-                    bat 'mvn clean package'
-                    archiveArtifacts 'target/*.war'
-                }
+                bat 'mvn clean package'
+                archiveArtifacts 'target/*.war'
             }
         }
         stage('Test') {
             steps {
-                dir('exemplev11') {
-                    bat 'mvn test'
-                }
+                bat 'mvn test'
             }
         }
     }
