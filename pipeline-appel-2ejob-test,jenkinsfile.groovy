@@ -25,7 +25,7 @@ pipeline {
     post {
         always {
             echo 'Je passe toujours par là'
-            deleteDir()
+            //deleteDir()
         }
     }
 }
